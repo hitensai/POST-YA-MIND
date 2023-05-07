@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  host: localhost
+  username: medium_user
+  password: 'password'
+  database: my_medium_clone_development
+
+test:
+  <<: *default
+  database: my_medium_clone_test
+
+production:
+  <<: *default
+  database: my_medium_clone_production
+  url: <%= ENV['DATABASE_URL'] %>
