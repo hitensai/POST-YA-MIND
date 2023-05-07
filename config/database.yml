@@ -12,6 +12,8 @@ development:
 
 test:
   <<: *default
+  username: medium_user
+  password: 'password'
   database: my_medium_clone_test
 
 production:
