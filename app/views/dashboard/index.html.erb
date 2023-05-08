@@ -3,7 +3,7 @@
     <h1>Posts</h1>
   </div>
   <div class="col-sm-2">
-    <%= link_to 'New Post', new_post_path, class: 'btn btn-primary float-right' %>
+    <%= link_to 'New Post', new_post_path, data: { turbo_frame: "modal" }, class: 'btn btn-primary float-right' %>
   </div>
 </div>
 
@@ -19,7 +19,7 @@
     </tr>
     </thead>
 
-    <tbody>
+    <tbody id="posts">
     <% @posts.each do |post| %>
       <tr>
         <td><%= post.title %></td>
@@ -88,5 +88,7 @@
     No Comment
   </div>
 <% end %>
+
+<%= link_to 'Back', root_path, class: 'btn btn-warning' %>
 
 <br>

@@ -1,4 +1,8 @@
-<h1>Active Feed</h1>
+<div class="row">
+  <h1 class="col-md-10">Active Feed</h1>
+  <%= link_to 'Dashboard', dashboard_path, class: 'btn btn-primary float-right col-sm-2' %>
+</div>
+<div style="padding-top: 10px"></div>
 <div class="row">
   <div class="col-sm-8">
     <% if @posts.any? %>

@@ -1,5 +1,7 @@
-<h1>New Post</h1>
-
-<%= render 'form', post: @post %>
-
-<%= link_to 'Back', _back_url, class: 'btn btn-warning' %>
+<%= turbo_frame_tag "modal" do %>
+  <div class="">
+	<h1>New Post</h1>
+	<%= render 'form', post: @post %>
+	<%= link_to 'Back', _back_url, class: 'btn btn-warning' %>
+  </div>	
+<% end %>
